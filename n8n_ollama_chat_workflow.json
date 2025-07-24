@@ -1,0 +1,89 @@
+{
+  "name": "Ollama_App",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "/generate",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "ad4d3e36-a963-41c3-90b4-de5046896dbf",
+      "name": "Webhook",
+      "webhookId": "84e4da5a-c8b2-4138-819f-f62a4b9a1046"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8000/chat",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n \"prompt\": \"{{ $json.body.prompt }}\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        304,
+        0
+      ],
+      "id": "3d2366b5-2069-471a-b049-0399507162fb",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        560,
+        0
+      ],
+      "id": "af4d8e9f-6c4d-4e68-bb4e-cbe1d2fd7edd",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "a5937f1d-2280-4892-be8f-b017a7d59c2a",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "7e817a3bf36d049cf24f27b702cabe4893bec1e4e8c6f26e983cf4c8fb8515ab"
+  },
+  "id": "33YUNKc5ogcLjlhh",
+  "tags": []
+}
