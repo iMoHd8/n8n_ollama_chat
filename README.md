@@ -6,8 +6,9 @@ FastAPI-based backend with local LLMs (Ollama) and integrating with n8n webhooks
 ```
 backend/
   main.py             # Main FastAPI endpoint
-  UI.py               # Main Streamlit app entry point  
-config.py             # Configuration settings
+  UI.py               # Main Streamlit app entry point
+  config.py             # Configuration settings
+assets/               # Screenshots from the application  
 requirements.txt      # Python dependencies
 n8n_ollama_chat_workflow.json    # n8n workflow file in JSON
 ```
