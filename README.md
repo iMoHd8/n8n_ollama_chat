@@ -66,7 +66,7 @@ n8n_ollama_chat_workflow.json    # n8n workflow file in JSON
         - Select the `n8n_ollama_chat_workflow.json` file
 
 
-    ![n8n_workflow](assets\n8n_workflow.png)
+    ![n8n_workflow](assets/n8n_workflow.png)
 
 
 6. Start the FastAPI Backend
@@ -105,7 +105,7 @@ You can run the application using Streamlit UI:
 
 2. Send You question, and wait for the answer...
 
-    ![Strealit_demo](assets\Streamlit_UI.png)
+    ![Strealit_demo](assets/Streamlit_UI.png)
 
 ## Customization
 - Modify `config.py` to adjust the ollama model id.
