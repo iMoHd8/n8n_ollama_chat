@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+from config import OLLAMA_MODEL_ID
 import requests
 
 app = FastAPI()
@@ -12,7 +13,7 @@ def chat(data: ChatRequest):
     response = requests.post(
         "http://localhost:11434/api/generate",
         json={
-            "model": "gemma3:latest",
+            "model": OLLAMA_MODEL_ID,
             "prompt": data.prompt,
             "stream": False
         }

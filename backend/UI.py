@@ -12,7 +12,7 @@ if prompt := st.chat_input("Enter your prompt here..."):
                 json={"prompt": prompt}
             )
 
-            result = {"response": response.json().get("response")}
+            result = response.json().get("response")
 
 
     st.markdown(result)
