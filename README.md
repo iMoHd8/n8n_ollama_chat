@@ -56,7 +56,6 @@ n8n_ollama_chat_workflow.json    # n8n workflow file in JSON
 
 5. Start n8n locally: (Make sure [Node.js](https://nodejs.org/en/download) is installed on your local machine)
     ```powershell
-    cd backend
     npx n8n
     ```
     - This will run n8n locally at http://localhost:5678
@@ -70,6 +69,7 @@ n8n_ollama_chat_workflow.json    # n8n workflow file in JSON
 
 
 6. Start the FastAPI Backend
+   - Open new terminal, then run the following command:
     ```powershell
     cd backend
     uvicorn main:app --reload
@@ -83,6 +83,7 @@ n8n_ollama_chat_workflow.json    # n8n workflow file in JSON
 You can run the application using the command line or any terminal:
 
 To run the workflow in production:
+- Open new terminal, then run the following command:
 ```powershell
 curl.exe -X POST -H "Content-Type: application/json" -d '{\"prompt\": \"What is the capital of Jordan?\"}' http://localhost:5678/webhook/generate
 ```
