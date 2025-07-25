@@ -63,6 +63,7 @@ n8n_ollama_chat_workflow.json    # n8n workflow file in JSON
         - Create Workflow
         - From the workflow option, select `import from File...`
         - Select the `n8n_ollama_chat_workflow.json` file
+        - Activate the workflow by turning on the **Activate** toggle button.
 
 
     ![n8n_workflow](assets/n8n_workflow.png)
