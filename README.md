@@ -102,6 +102,7 @@ or run the workflow in test mode:
 You can run the application using Streamlit UI:
 1. Start the Streamlit app:
    ```powershell
+   cd backend
    streamlit run UI.py
    ```
 
