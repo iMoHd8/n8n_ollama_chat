@@ -94,6 +94,8 @@ or run the workflow in test mode:
     curl.exe -X POST -H "Content-Type: application/json" -d '{\"prompt\": \"What is the capital of Jordan?\"}' http://localhost:5678/webhook-test/generate
     ```
 - Change the query ("What is the capital of Jordan?") to any question you want
+- n8n Output example:
+    ![Example](assets/n8n_output_example.png)
 
 
 ### Option 2
