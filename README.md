@@ -97,7 +97,7 @@ or run the workflow in test mode:
     ```
 - Change the query ("What is the capital of Jordan?") to any question you want
 - n8n Output example:
-    ![Example](assets/n8n_output_example.png)
+  ![Example](assets/n8n_output_example.png)
 
 
 ### Option 2
