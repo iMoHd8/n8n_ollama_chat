@@ -56,7 +56,6 @@ n8n_ollama_chat_workflow.json    # n8n workflow file in JSON
 
 5. Start n8n locally: (Make sure [Node.js](https://nodejs.org/en/download) is installed on your local machine)
     ```powershell
-    cd backend
     npx n8n
     ```
     - This will run n8n locally at http://localhost:5678
@@ -64,12 +63,14 @@ n8n_ollama_chat_workflow.json    # n8n workflow file in JSON
         - Create Workflow
         - From the workflow option, select `import from File...`
         - Select the `n8n_ollama_chat_workflow.json` file
+        - Activate the workflow by turning on the **Activate** toggle button.
 
 
-    ![n8n_workflow](assets\n8n_workflow.png)
+    ![n8n_workflow](assets/n8n_workflow.png)
 
 
 6. Start the FastAPI Backend
+   - Open new terminal, then run the following command:
     ```powershell
     cd backend
     uvicorn main:app --reload
@@ -83,6 +84,7 @@ n8n_ollama_chat_workflow.json    # n8n workflow file in JSON
 You can run the application using the command line or any terminal:
 
 To run the workflow in production:
+- Open new terminal, then run the following command:
 ```powershell
 curl.exe -X POST -H "Content-Type: application/json" -d '{\"prompt\": \"What is the capital of Jordan?\"}' http://localhost:5678/webhook/generate
 ```
@@ -102,12 +104,13 @@ or run the workflow in test mode:
 You can run the application using Streamlit UI:
 1. Start the Streamlit app:
    ```powershell
+   cd backend
    streamlit run UI.py
    ```
 
 2. Send You question, and wait for the answer...
 
-    ![Strealit_demo](assets\Streamlit_UI.png)
+    ![Strealit_demo](assets/Streamlit_UI.png)
 
 ## Customization
 - Modify `config.py` to adjust the ollama model id.
